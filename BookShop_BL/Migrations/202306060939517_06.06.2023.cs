@@ -7,14 +7,10 @@
     {
         public override void Up()
         {
-            AddColumn("dbo.Books", "Author", c => c.String());
-            DropColumn("dbo.Books", "AuthorName");
         }
         
         public override void Down()
         {
-            AddColumn("dbo.Books", "AuthorName", c => c.String());
-            DropColumn("dbo.Books", "Author");
         }
     }
 }

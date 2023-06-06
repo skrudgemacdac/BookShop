@@ -96,6 +96,7 @@ namespace BookShop_UI
             this.button1.TabIndex = 6;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // BookForm
             // 
@@ -111,6 +112,7 @@ namespace BookShop_UI
             this.Controls.Add(this.label1);
             this.Name = "BookForm";
             this.Text = "BookForm";
+            this.Load += new System.EventHandler(this.BookForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

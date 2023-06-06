@@ -13,12 +13,12 @@ namespace BookShop_BL.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202306060842511_06.06.2023"; }
+            get { return "202306060939517_06.06.2023"; }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return null; }
+            get { return Resources.GetString("Source"); }
         }
         
         string IMigrationMetadata.Target
