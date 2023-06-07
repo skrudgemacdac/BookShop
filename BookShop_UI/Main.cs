@@ -46,5 +46,10 @@ namespace BookShop_UI
             var catalogClient = new Catalog<Client>(db.Clients, db);
             catalogClient.Show();
         }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

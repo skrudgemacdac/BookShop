@@ -17,6 +17,7 @@ namespace BookShop_UI
         {
             Client = client;
             textBox1.Text = Client.Name;
+            textBox2.Text = Client.Surname;
         }
 
         private void ClientForm_Load(object sender, EventArgs e)
@@ -28,6 +29,7 @@ namespace BookShop_UI
         {
             Client = Client ?? new Client();
             Client.Name = textBox1.Text;
+            Client.Surname = textBox2.Text;
             Close();
         }
     }
