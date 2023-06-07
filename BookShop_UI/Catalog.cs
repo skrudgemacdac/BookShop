@@ -48,7 +48,6 @@ namespace BookShop_UI
                     var form = new BookForm(book);
                     if (form.ShowDialog() == DialogResult.OK)
                     {
-                        book = form.Book;
                         db.SaveChanges();
                         dataGridView.Update();
                     }
@@ -63,7 +62,6 @@ namespace BookShop_UI
                     var form = new ClientForm(client);
                     if (form.ShowDialog() == DialogResult.OK)
                     {
-                        client = form.Client;
                         db.SaveChanges();
                         dataGridView.Update();
                     }

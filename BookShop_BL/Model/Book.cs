@@ -11,5 +11,20 @@
         {
             return $"{Name}, {Author} - {Price}";
         }
+
+        public override int GetHashCode()
+        {
+            return BookId;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Book book)
+            {
+                return BookId.Equals(book.BookId);
+            }
+
+            return false;
+        }
     }
 }

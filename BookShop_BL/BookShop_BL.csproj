@@ -58,6 +58,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Book.cs" />
     <Compile Include="Model\BSContext.cs" />
+    <Compile Include="Model\Cart.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\Paycheck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
