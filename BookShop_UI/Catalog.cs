@@ -25,5 +25,40 @@ namespace BookShop_UI
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var id = dataGridView.SelectedRows[0].Cells[0].Value;
+
+            if (typeof(T) == typeof(Book))
+            {
+                var book = set.Find(id) as Book;
+                if (book != null)
+                {
+                    var form = new BookForm(book);
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        book = form.Book;
+                        db.SaveChanges();
+                        dataGridView.Update();
+                    }
+                }
+            }
+
+            else if (typeof(T) == typeof(Client)) 
+            {
+                var client = set.Find(id) as Client;
+                if (client != null) 
+                {
+                    var form = new ClientForm(client);
+                    if (form.ShowDialog() == DialogResult.OK) 
+                    {
+                        client = form.Client;
+                        db.SaveChanges();
+                        dataGridView.Update();
+                    }
+                }
+            }
+        }
     }
 }
